@@ -1,0 +1,405 @@
+/* 全局设置 */
+
+body{
+font-family: 'Poppins', sans-serif;
+margin:0;
+background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+color:#333;
+min-height: 100vh;
+}
+
+
+/* 顶部导航栏 */
+
+header{
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+color:white;
+padding:20px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+header h1{
+margin:0;
+font-family: 'Playfair Display', serif;
+font-size: 32px;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+font-weight:bold;
+transition: 0.3s;
+position: relative;
+}
+
+
+nav a:hover{
+text-decoration:underline;
+text-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+
+/* hero封面 */
+
+.hero{
+height:300px;
+background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%);
+background-size:cover;
+background-position:center;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+color:white;
+text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+border-radius: 15px;
+margin: 20px;
+font-family: 'Playfair Display', serif;
+}
+
+.hero h2 {
+font-size: 32px;
+margin: 10px 0;
+}
+
+.hero p {
+font-size: 18px;
+letter-spacing: 2px;
+}
+
+
+/* section布局 */
+
+section{
+padding:40px;
+background: rgba(255,255,255,0.95);
+margin: 20px;
+border-radius: 15px;
+box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+section h2 {
+font-family: 'Playfair Display', serif;
+color: #667eea;
+font-size: 28px;
+margin-top: 0;
+}
+
+
+/* 卡片容器 */
+
+.card-container{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+
+/* 歌手卡片 */
+
+.card{
+background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+padding:20px;
+border-radius:12px;
+width:130px;
+
+box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+transition:0.3s;
+border: 2px solid rgba(255,255,255,0.5);
+}
+
+.card:nth-child(2) {
+background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.card:nth-child(3) {
+background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);
+}
+
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 12px 25px rgba(0,0,0,0.2);
+}
+
+
+/* 卡片图片 */
+
+.card img{
+width:100%;
+border-radius:10px;
+margin-bottom:10px;
+
+transition:0.3s;
+}
+
+
+.card:hover img{
+transform:scale(1.05);
+}
+
+
+.card h3 {
+margin: 10px 0;
+font-family: 'Playfair Display', serif;
+color: #333;
+}
+
+
+.card h3 a {
+text-decoration: none;
+color: #333;
+transition: 0.3s;
+}
+
+
+.card h3 a:hover {
+color: #764ba2;
+text-shadow: 0 2px 8px rgba(118, 75, 162, 0.3);
+}
+
+
+.card p {
+margin: 5px 0;
+font-size: 14px;
+color: #555;
+}
+
+
+/* 文章预览 */
+
+.article-preview{
+
+background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
+padding: 15px; /* 减少内边距 */
+
+border-radius:10px;
+
+margin: 10px 0; /* 减少间距 */
+
+box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+transition:0.3s;
+
+}
+
+
+.article-preview:hover{
+
+background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+
+transform:translateY(-4px);
+color: white;
+
+}
+
+
+/* 文章图片 */
+
+.article-preview img{
+
+width: 120px; /* 缩小图片宽度 */
+
+height: auto; /* 保持宽高比 */
+
+border-radius:8px;
+
+}
+
+
+/* 歌曲列表 */
+
+ul{
+padding-left:20px;
+}
+
+
+ul li{
+margin:10px 0;
+}
+
+
+ul li a{
+margin-left:10px;
+color: #764ba2;
+text-decoration:none;
+font-weight: 600;
+transition: 0.3s;
+}
+
+
+ul li a:hover{
+text-decoration:underline;
+color: #f093fb;
+}
+
+
+/* 让文章预览部分支持滚动效果 */
+#articles {
+    display: flex;
+    flex-direction: row; /* 横向排列 */
+    gap: 20px; /* 每篇文章之间的间距 */
+    overflow-x: auto; /* 添加横向滚动条 */
+    padding: 10px; /* 内边距 */
+}
+
+.article-preview {
+    flex: 0 0 300px; /* 每篇文章固定宽度 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    border-radius: 8px; /* 圆角 */
+    padding: 10px; /* 内边距 */
+    background-color: #fff; /* 背景颜色 */
+    transition: transform 0.3s; /* 添加过渡效果 */
+}
+
+.article-preview:hover {
+    transform: scale(1.05); /* 鼠标悬停放大效果 */
+}
+
+
+/* 论坛分区样式 */
+#forum {
+    padding: 40px;
+    background: rgba(240, 240, 255, 0.95);
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+#forum h2 {
+    font-family: 'Playfair Display', serif;
+    color: #764ba2;
+    font-size: 28px;
+    margin-top: 0;
+}
+
+.forum-preview {
+    margin: 20px 0;
+}
+
+.forum-preview h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.forum-preview ul {
+    padding-left: 20px;
+}
+
+.forum-preview ul li {
+    margin: 10px 0;
+}
+
+.forum-preview ul li a {
+    color: #764ba2;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.forum-preview ul li a:hover {
+    text-decoration: underline;
+    color: #f093fb;
+}
+
+.forum-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #764ba2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.forum-link:hover {
+    background: #f093fb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 论坛表单样式 */
+.forum-form {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f9f9ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.forum-form h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #764ba2;
+}
+
+.forum-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.forum-form input[type="text"],
+.forum-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.forum-form input[type="text"]:focus,
+.forum-form textarea:focus {
+    border-color: #764ba2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(118, 75, 162, 0.3);
+}
+
+.forum-form button {
+    padding: 10px 20px;
+    background: #764ba2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.forum-form button:hover {
+    background: #f093fb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 页脚 */
+
+footer{
+
+text-align:center;
+
+padding:20px;
+
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+color:white;
+
+margin-top:40px;
+font-family: 'Poppins', sans-serif;
+
+}
